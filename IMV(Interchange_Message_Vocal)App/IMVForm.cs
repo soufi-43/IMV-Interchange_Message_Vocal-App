@@ -23,12 +23,12 @@ using PortNumber = ServerSocket.ServerSocket.enPortNum;
 
 namespace IMV_Interchange_Message_Vocal_App
 {
-    public partial class Form1 : Form
+    public partial class IMVForm : Form
     {
        
        
         Thread t; 
-        public Form1()
+        public IMVForm()
         {
             InitializeComponent();
 
@@ -102,9 +102,7 @@ namespace IMV_Interchange_Message_Vocal_App
         }
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            btnStartRecord2.Enabled = true;
-            //btnStopRecord2.Enabled = false;
-            HandleShowLbales();
+            
         }
 
    
@@ -217,6 +215,14 @@ namespace IMV_Interchange_Message_Vocal_App
             ClientSocket.ClientSocket.StopRecordAndSendAudio((int)PortNumber.client);
 
             ServerSocket.ServerSocket.RecordingStopped += OnRecordingClientStopped;
+
+        }
+
+        private void btnConnect_Click_1(object sender, EventArgs e)
+        {
+            btnStartRecord2.Enabled = true;
+            //btnStopRecord2.Enabled = false;
+            HandleShowLbales();
 
         }
     }
