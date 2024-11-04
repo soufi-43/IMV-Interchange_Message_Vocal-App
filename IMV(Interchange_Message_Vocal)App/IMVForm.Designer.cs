@@ -114,6 +114,7 @@
             this.btnStopRec1.Size = new System.Drawing.Size(51, 40);
             this.btnStopRec1.TabIndex = 67;
             this.btnStopRec1.UseVisualStyleBackColor = false;
+            this.btnStopRec1.Click += new System.EventHandler(this.btnStopRec1_Click);
             // 
             // label8
             // 
@@ -139,6 +140,7 @@
             this.btnStartRec1.Size = new System.Drawing.Size(51, 40);
             this.btnStartRec1.TabIndex = 65;
             this.btnStartRec1.UseVisualStyleBackColor = false;
+            this.btnStartRec1.Click += new System.EventHandler(this.btnStartRec1_Click);
             // 
             // label6
             // 
@@ -164,6 +166,7 @@
             this.btnStopRecord2.Size = new System.Drawing.Size(51, 40);
             this.btnStopRecord2.TabIndex = 63;
             this.btnStopRecord2.UseVisualStyleBackColor = false;
+            this.btnStopRecord2.Click += new System.EventHandler(this.btnStopRecord2_Click);
             // 
             // label5
             // 
@@ -172,9 +175,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(290, 338);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 16);
+            this.label5.Size = new System.Drawing.Size(93, 16);
             this.label5.TabIndex = 62;
-            this.label5.Text = "dispose";
+            this.label5.Text = "Disconnect ";
             // 
             // btnDispose
             // 
@@ -189,6 +192,7 @@
             this.btnDispose.Size = new System.Drawing.Size(51, 40);
             this.btnDispose.TabIndex = 61;
             this.btnDispose.UseVisualStyleBackColor = false;
+            this.btnDispose.Click += new System.EventHandler(this.btnDispose_Click);
             // 
             // label4
             // 
@@ -225,6 +229,7 @@
             this.btnStartRecord2.Size = new System.Drawing.Size(51, 40);
             this.btnStartRecord2.TabIndex = 58;
             this.btnStartRecord2.UseVisualStyleBackColor = false;
+            this.btnStartRecord2.Click += new System.EventHandler(this.btnStartRecord_Click);
             // 
             // pictureBox3
             // 

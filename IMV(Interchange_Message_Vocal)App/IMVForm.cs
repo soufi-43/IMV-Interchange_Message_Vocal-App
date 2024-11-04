@@ -25,9 +25,9 @@ namespace IMV_Interchange_Message_Vocal_App
 {
     public partial class IMVForm : Form
     {
-       
-       
-        Thread t; 
+
+
+        Thread t;
         public IMVForm()
         {
             InitializeComponent();
@@ -79,7 +79,7 @@ namespace IMV_Interchange_Message_Vocal_App
             btnStopRec1.Enabled = false;
 
 
-            
+
 
 
         }
@@ -91,29 +91,26 @@ namespace IMV_Interchange_Message_Vocal_App
             pcbServer.Hide();
             pcbClient.Show();
         }
-        private  void StartListening(PortNumber port)
+        private void StartListening(PortNumber port)
         {
             //await Task.Run(()=>ServerSocket.ServerSocket.StartServerAudio(PortNumber)); 
 
-           t= new Thread(()=>ServerSocket.ServerSocket.StartServerAudio(port)); 
+            t = new Thread(() => ServerSocket.ServerSocket.StartServerAudio(port));
 
             t.Start();
             //t.Join();
         }
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
-   
+
         private void LunchPicBox()
         {
             pcbServer.Image = Resources.equalizer_10278_128;
-            pcbClient.Image = Resources.public_wifi_5403_128; 
+            pcbClient.Image = Resources.public_wifi_5403_128;
         }
-        private  void btnStartRecord_Click(object sender, EventArgs e)
+        private void btnStartRecord_Click(object sender, EventArgs e)
         {
-            LunchPicBox(); 
+            LunchPicBox();
             StartListening(PortNumber.server);
 
             lblServerPort.Text = "start recording ";
@@ -178,9 +175,10 @@ namespace IMV_Interchange_Message_Vocal_App
 
 
         }
-        private void btnStartRec1_Click(object sender, EventArgs e) {
+        private void btnStartRec1_Click(object sender, EventArgs e)
+        {
 
-            
+
             //MessageBox.Show(pcbServer.Tag.ToString()); 
             //pcbServer.Hide();
             switchPicBox();
@@ -190,14 +188,14 @@ namespace IMV_Interchange_Message_Vocal_App
             StartListening(PortNumber.client);
             btnStopRec1.Enabled = true;
 
-            
+
 
 
             // start recording 
             btnStartRec1.Enabled = false;
             btnStopRec1.Enabled = true;
 
-            
+
             //pcbClient.Show(); 
 
             ClientSocket.ClientSocket.StartRecordAudio();
@@ -224,6 +222,12 @@ namespace IMV_Interchange_Message_Vocal_App
             //btnStopRecord2.Enabled = false;
             HandleShowLbales();
 
+        }
+
+        private void btnDispose_Click(object sender, EventArgs e)
+        {
+            t.Abort();
+            MessageBox.Show("you just disconnect you have to connect again "); 
         }
     }
 }
