@@ -31,9 +31,9 @@
 - **Practical Skill Demonstration**: This app highlights skills in socket programming, asynchronous operations, and client-server architecture, demonstrating a deep understanding of real-time application development in C#.
 
 ## Setup
-1. **Clone the repository**: `git clone https://github.com/yourusername/project-name.git`
-2. **Install dependencies** (if any): Naudio 
-3. **Compile and Run**:.NET framework 4.8 `).
+1. **Clone the repository**: `git clone [https://github.com/yourusername/project-name](https://github.com/soufi-43/IMV-Interchange_Message_Vocal-App.git).git`
+2. **Install dependencies** : Naudio 
+3. **Compile and Run**:.NET framework 4.8 `.
 
 ## Usage
 
