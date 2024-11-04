@@ -91,7 +91,7 @@ The design enables seamless two-way audio communication, with a robust UI to sim
 
 
 ## Demo
-![Screenshot](link-to-your-screenshot.png)
+![Screenshot](IMV(Interchange_Message_Vocal)App/Resources/demo.png)
 
 ## Future Improvements
 - **Enhanced UI/UX**
